@@ -112,12 +112,11 @@ class Tx_SzEbook_Controller_EbookTaskController extends Tx_Extbase_MVC_Controlle
 
 				$this->saveImg($file, $path, $img->getnumberimages());
 
-				$pdf->setTurnjs(1);
+				$pdf->isTurnjs(true);
 				$this->ebookRepository->update($pdf);
 				return true;
 			} else {
-
-				$pdf->setTurnjs(1);
+				$pdf->isTurnjs(true);
 				$this->ebookRepository->update($pdf);
 				return false;
 			}
